@@ -8,10 +8,11 @@ app.use(express.json());
 
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+mongoose.connect('mongodb://127.0.0.1:27017/user-points-db', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
+
 
 // Schemas
 const UserSchema = new mongoose.Schema({
